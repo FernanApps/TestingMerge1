@@ -18,7 +18,7 @@ jobs:
 
       - name: Delete files of directory
         run: |
-          rm -r env.DIRECTORY_TO_DELETE
+          rm -r "${{env.API_KEY}}"
           ls -la
           echo "---------- VARIABLES ---------------"
           echo "DIRECTORY_TO_DELETE - ${{env.API_KEY}}"
@@ -33,8 +33,8 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: env.BRANCH
-          message: env.MESSAGE
-          author_name: env.NAME
-          author_email: env.EMAIL
+          branch: ${{ env.BRANCH }}
+          message: ${{env.MESSAGE}}
+          author_name: ${{env.NAME}}
+          author_email: ${{env.EMAIL}}
           force: true

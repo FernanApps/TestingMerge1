@@ -1,8 +1,6 @@
 name: Detele Files
 on: 
   push:
-  schedule:
-      - cron: "30 0 * * *"
   
 env:
   ## Sets environment variable

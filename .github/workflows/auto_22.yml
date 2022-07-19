@@ -1,0 +1,22 @@
+name: Commit New 
+on: push
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create report file
+        run: |
+          rm -r nocarpeta
+          ls -la
+      - name: Pushing to production branch
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: compressed-master
+          message: Testing
+          author_name: MinifyAction[bot]
+          author_email: amireshoon-minifyAction@users.noreply.github.com
+          force: true

@@ -15,8 +15,8 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: compressed-master
+          branch: main
           message: Testing
-          author_name: MinifyAction[bot]
-          author_email: amireshoon-minifyAction@users.noreply.github.com
+          author_name: BestWorking
+          author_email: fernan.apps@github.com
           force: true

@@ -18,10 +18,10 @@ jobs:
 
       - name: Delete files of directory
         run: |
-          rm -r "${{env.API_KEY}}"
+          rm -r "${{env.DIRECTORY_TO_DELETE}}"
           ls -la
           echo "---------- VARIABLES ---------------"
-          echo "DIRECTORY_TO_DELETE - ${{env.API_KEY}}"
+          echo "DIRECTORY_TO_DELETE - ${{env.DIRECTORY_TO_DELETE}}"
           echo "BRANCH - ${{env.BRANCH}}"
           echo "MESSAGE - ${{env.MESSAGE}}"
           echo "NAME - ${{env.NAME}}"
